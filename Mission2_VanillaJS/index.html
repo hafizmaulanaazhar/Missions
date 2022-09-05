@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stars</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta https-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    
+  </head>
+  <body>
+
+    <header>
+       <a href="#" class="brand">Travel</a>
+       <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Eksplore</a>
+          <a href="#">Gallery</a>
+          <a href="#">Contact</a>
+        </div>
+       </div>
+    </header>
+    <section class="home">
+      <div class="content">
+        <h1>Kang<br><span>Conqueror</span></h1>
+        <p>Dalam komiknya ia merupakan musuh dari Avengers dan juga the Fantastic Four. Selain bernama Kang The Conqueror, ia juga mempunyai variant lain yaitu Iron Lad, Rama-Tut, Scarlet Centurion, Immortus, serta The Master of Time. Namun dari banyaknya varian dirinya Kang The Conqueror lah yang paling mendominasi.</p>
+        <a href="https://www.liputan6.com/regional/read/5023522/mengenal-kang-the-conqueror-karakter-villain-yang-hebohkan-marvel-cinematic-universe">Read More</a>
+      </div>
+    </section>
+    <div class="night"></div>
+        <div class="surface"></div>
+        <div class="car">
+            <img src="./assets/Img_06.png"alt="">
+        </div>
+    <script src="./assets/index.js"></script>
+    <section id="stars">
+    </section>
+    <script type="text/javascript">
+      function stars() {
+        const count = 300;
+        const stars = document.getElementById('stars');
+        var i = 0;
+        while(i < count) {
+          const star = document.createElement('i');
+          const x = Math.floor(Math.random() * window.innerWidth)
+          const y = Math.floor(Math.random() * window.innerHeight)
+          const size = Math.random() * 5;
+          star.style.left = x+'px';
+          star.style.top = y+'px';
+          star.style.height = 1+size+'px';
+          star.style.width = 1+size+'px';
+          const duration = Math.random() * 2;
+          star.style.animationDuration = 2+duration+'s';
+          stars.appendChild(star);
+          i++
+        }
+      }
+      stars();
+    </script>
+  </body>
+</html>
